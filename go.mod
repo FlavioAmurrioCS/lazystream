@@ -1,3 +1,3 @@
-module github.com/FlavioAmurrioCS/lazy-stream
+module github.com/FlavioAmurrioCS/lazystream
 
 go 1.24.0
