@@ -10,6 +10,10 @@ type Stream[T any] struct {
 	_seq iter.Seq[T]
 }
 
+func (s *Stream[T]) Iter() iter.Seq[T] {
+	return s._seq
+}
+
 func FromSlice[T any](data []T) *Stream[T] {
 	return &Stream[T]{func(yield func(T) bool) {
 		for _, v := range data {
